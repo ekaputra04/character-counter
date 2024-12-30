@@ -11,7 +11,7 @@ interface CharacterStatisticsProps {
 
 const CharacterStatistics: React.FC<CharacterStatisticsProps> = ({ text }) => {
   return (
-    <div className="grid grid-cols-4 pb-4">
+    <div className="gap-4 grid grid-cols-2 lg:grid-cols-4 pb-4">
       <div className="space-y-2">
         <h2 className="font-bold text-xl">{countCharacters(text)}</h2>
         <p>Characters</p>

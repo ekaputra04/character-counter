@@ -96,12 +96,12 @@ const App: React.FC = () => {
   return (
     <>
       <Spotlight className="-top-40 md:-top-20 left-20" fill="green" />
-      <div className="px-32 pb-24">
+      <div className="px-8 md:px-16 lg:px-32 pb-12 lg:pb-24">
         <Header />
 
         <div className="pt-16 w-full">
-          <div className="flex justify-between gap-8 rounded-lg">
-            <div className="relative bg-white w-3/5">
+          <div className="flex lg:flex-row flex-col justify-between gap-8 rounded-lg">
+            <div className="relative bg-white lg:w-3/5">
               <TextAreaInput text={text} setText={setText} />
               {text ? (
                 <>
@@ -130,7 +130,7 @@ const App: React.FC = () => {
                 </Button>
               )}
             </div>
-            <div className="w-2/5">
+            <div className="lg:w-2/5">
               <div className="p-4 border-t-4 border-r-8 border-b-8 border-black border-l-4 rounded-2xl">
                 <CharacterStatistics text={text} />
                 <hr />
@@ -165,7 +165,7 @@ const App: React.FC = () => {
           <h3 className="font-semibold text-3xl">
             What can you do with our character counter tool?
           </h3>
-          <div className="gap-4 grid grid-cols-4">
+          <div className="gap-4 grid grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
               <div
                 className={`space-y-4 p-6 rounded-2xl text-start border ${feature.color}`}
@@ -183,7 +183,7 @@ const App: React.FC = () => {
           <h3 className="font-semibold text-3xl">
             What can our character counter be used for?
           </h3>
-          <div className="gap-4 grid grid-cols-4">
+          <div className="gap-4 grid grid-cols-2 lg:grid-cols-4">
             {uses.map((use, index) => (
               <div
                 className="space-y-4 p-6 border-l-2 border-l-emerald-500 text-start"
